@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>aui</artifactId>
-    <version>6.0.7-SNAPSHOT</version>
+    <version>7.7.0-SNAPSHOT</version>
     <name>Atlassian User Interface</name>
     <description>WebJar for Atlassian User Interface</description>
     <url>http://webjars.org</url>
@@ -46,7 +46,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.url>https://bitbucket.org/atlassian/aui-adg-dist/get/${version.unsnapshot}.zip</upstream.url>
+        <upstream.url>https://packages.atlassian.com/maven-public/com/atlassian/aui/aui-flat-pack/${version.unsnapshot}/aui-flat-pack-${version.unsnapshot}.zip</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs>
             {
@@ -106,7 +106,7 @@
                                 <echo message="moving resources" />
                                 <dirset id="auiDir" dir="${project.build.directory}">
                                     <filename name="**/aui/" />
-                                    <depth max="1" />
+                                    <depth max="0" />
                                 </dirset>
                                 <echo message="auiDir = ${toString:auiDir}" />
                                 <move todir="${destDir}">
